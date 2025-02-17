@@ -5,33 +5,37 @@
 
 ### **一、基础操作命令**  
 1. **文件/目录操作**  
-   - `cd`：切换目录  
+   - `cd`：切换目录(change directory)  
      ```bash
      cd /var/log  # 进入日志目录
      ```
-   - `ls`：列出文件  
+     
+   - `ls`：列出文件(list)  
      ```bash
      ls -lrt  # 按时间倒序列出文件（常用于找最新日志）
      ```
-   - `cat`/`tail`/`less`：查看文件内容  
+     
+   - `cat`/`tail`/`less`：查看文件内容(concatenate\less is more)  
      ```bash
      tail -f app.log  # 实时追踪日志更新（测试时监控日志）
      ```
-   - `grep`：文本搜索  
+     
+   - `grep`：文本搜索(Globally search a Regular Expression and Print)  
      ```bash
      grep "ERROR" test_report.log  # 过滤日志中的错误信息
      ```
+     
    - `find`：查找文件  
      ```bash
      find /home -name "*.log"  # 搜索所有.log文件
      ```
 
 2. **权限管理**  
-   - `chmod`：修改文件权限  
+   - `chmod`：修改文件权限(change mode)  
      ```bash
      chmod 755 startup.sh  # 赋予脚本可执行权限
      ```
-   - `sudo`：提权执行  
+   - `sudo`：提权执行(Super User Do)  
      ```bash
      sudo yum install jmeter  # 安装测试工具
      ```
